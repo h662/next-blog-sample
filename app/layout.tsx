@@ -20,7 +20,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="max-w-screen-md mx-auto">
           <h1 className="hover:text-gray-500 px-2 py-4 font-yd-sea text-2xl shadow-lg">
-            <Link href="/">h662's Blog</Link>
+            <Link href="/">h662&apos;s Blog</Link>
           </h1>
           {children}
         </div>
