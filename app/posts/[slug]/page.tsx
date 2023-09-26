@@ -24,7 +24,7 @@ const PostLayout: NextPage<PostLayoutProps> = ({ params }) => {
   if (!post) throw new Error(`Post not found for slug: ${params.slug}`);
 
   return (
-    <article className="pt-8">
+    <article className="pt-8 shadow-lg min-h-screen">
       {post.thumb && (
         <div className="flex justify-center">
           <Image
@@ -41,14 +41,14 @@ const PostLayout: NextPage<PostLayoutProps> = ({ params }) => {
           {post.title}
         </h1>
         <time
-          className="text-right mt-2 text-gray-500 text-xs md:text-lg"
+          className="text-right mt-2 text-gray-500 text-xs md:text-lg mx-2"
           dateTime={post.date}
         >
           {format(parseISO(post.date), "LLLL d, yyyy")}
         </time>
       </div>
       <div
-        className="mt-8 mx-4 text-sm md:text-xl"
+        className="mt-8 mx-4 text-sm truncate  md:text-xl [&>ol]:flex [&>ol]:flex-col [&>ol]:gap-4 [&>ol]:my-4 [&>h3]:mt-4 [&>h3]:font-semibold [&>h3:last-child]:pb-4"
         dangerouslySetInnerHTML={{ __html: post.body.html }}
       />
     </article>

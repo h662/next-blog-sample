@@ -13,7 +13,7 @@ const Home: NextPage = () => {
   return (
     <>
       <MainBanner />
-      <ul className="flex flex-col gap-8 mt-8">
+      <ul className="flex flex-col gap-8 mt-8 shadow-lg min-h-screen">
         {posts.map((v, i) => (
           <PostCard key={i} post={v} />
         ))}

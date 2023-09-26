@@ -10,7 +10,7 @@ interface PostCardProps {
 
 const PostCard: FC<PostCardProps> = ({ post }) => {
   return (
-    <li className="shadow-lg px-2 py-4">
+    <li className="shadow-md px-2 py-4">
       <Link
         className="flex flex-col items-center md:flex-row w-full"
         href={post.url}
