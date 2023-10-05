@@ -22,14 +22,14 @@ export const generateMetadata = ({ params }: PostLayoutProps) => {
       url: post.url,
       title: post.title,
       description: post.desc,
-      image: [post.thumb ? `/images/${post.thumb}` : `/images/owl.png`],
+      image: [post.thumb ? `./images/${post.thumb}` : `./images/owl.png`],
     },
     twitter: {
       card: "summary_large_image",
       url: post.url,
       title: post.title,
       description: post.desc,
-      image: [post.thumb ? `/images/${post.thumb}` : `/images/owl.png`],
+      image: [post.thumb ? `./images/${post.thumb}` : `./images/owl.png`],
     },
   };
 };
