@@ -15,7 +15,23 @@ export const generateMetadata = ({ params }: PostLayoutProps) => {
 
   if (!post) throw new Error(`Post not found for slug: ${params.slug}`);
 
-  return { title: post.title };
+  return {
+    title: post.title,
+    openGraph: {
+      type: "website",
+      url: post.url,
+      title: post.title,
+      description: post.desc,
+      image: post.thumb ? `/images/${post.thumb}` : `/images/owl.png`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      url: post.url,
+      title: post.title,
+      description: post.desc,
+      image: post.thumb ? `/images/${post.thumb}` : `/images/owl.png`,
+    },
+  };
 };
 
 const PostLayout: NextPage<PostLayoutProps> = ({ params }) => {
